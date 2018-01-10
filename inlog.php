@@ -1,4 +1,37 @@
 <!DOCTYPE html>
+
+<?php
+
+session_start();
+
+function showHeader(){
+        $returnString = <<<HEADSTRING
+        <html>
+            <head>
+                
+                <link rel = "stylesheet" type = "text/css" href = "StyleSheet.css">
+                
+                <script>
+                function logout(){
+                    document.location="Logout.php";
+   
+                }
+                </script>
+            </head>
+        <body>
+ 
+HEADSTRING;
+     return $returnString;
+    }
+     
+function showFooter(){
+    $returnString = "\t</body>\n";
+    $returnString .= "</html>";
+    return $returnString;
+}
+
+?>
+
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
